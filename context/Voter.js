@@ -10,7 +10,7 @@ const client=ipfsHttpClient("https://ipfs.infura.io:5001/api/v0");
 
 const fetchContract=(signerOrProvider) => {
     new ethers.Contract(VotingAddress, VotingAddressABI, signerOrProvider);
-
+};
     export const VotingContext=React.createContext();
 
     export const VotingProvider=({ children })=>{
@@ -20,7 +20,7 @@ const fetchContract=(signerOrProvider) => {
         const [candidateLength, setCandidateLength]=useState('');
         const pushCandidate=[];
         const candidateIndex=[];
-        const [candidateArray,setCandidateLength]=useState(pushCandidate);
+        const [candidateArray,setCandidateArray]=useState(pushCandidate);
 
         const [error,setError]=useState('');
         const higestVote=[];
@@ -72,9 +72,10 @@ const fetchContract=(signerOrProvider) => {
                 }}
                 >
                     {children}
-                </VotingContext.Provider>;
+                </VotingContext.Provider>
         );
 };
+
 const Voter=()=>{
     return (
         <div>

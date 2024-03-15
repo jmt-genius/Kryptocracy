@@ -29,7 +29,43 @@ const allowedVoters = () => {
     accept:"image/*",
 maxSize:5000000,
     });
-    return <div>allowed-voters</div>
-}
+
+    //jsx part
+    return (
+    <div className={Style.createVoter}>
+        <div>
+            {fileUrl && (
+                <div className={Style.voterInfo}>
+                    <img src={fileUrl} alt="Voter image"/>
+                    <div className={Style.voterInfo_paragraph}>
+                        <p>
+                            Name: <span>&nbps; {formInput.name}</span>
+                        </p>
+                        <p>
+                            Add: &nbps; <span>{formInput.address.slice(0,20)}</span>
+                        </p>
+                        <p>
+                            Pos: &nbps; <span>{formInput.position}</span>
+                        </p>
+                    </div>
+                </div>
+                    )}
+
+                {
+                    !fileUrl && (
+                        <div className={Style.sideInfo}> 
+                        <div className={Style.sideInfo_box}>
+                            <h4>Create candidate For voting</h4>
+                            <p>
+                                Kryptocracy is a voting platform that allows you to create a candidate for voting
+                            </p>
+                        </div>
+                        </div>
+                    )
+                }
+        </div>
+    </div>
+    );
+};
 
 export default allowedVoters;

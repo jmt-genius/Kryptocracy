@@ -61,10 +61,3 @@ Contributions are what make the open-source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@example.com
-
-Project Link: [https://github.com/your_username/your_project](https://github.com/your_username/your_project)
-```
-
-Replace `Project Name`, `Brief description of your project`, `your_username`, `your_project`, `Your Name`, `@twitter_handle`, and `email@example.com` with appropriate values for your project. Additionally, update the usage instructions and commands as needed based on your project's structure.
